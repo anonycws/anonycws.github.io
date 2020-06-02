@@ -1,0 +1,215 @@
+<html>
+  <head>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+
+
+<script type="text/javascript">
+function myFunction(elem) {
+  var x = document.getElementById(elem);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    //$("#"+elem+ " img").css({"width":"400px","height":"200px"})
+  } else {
+    x.style.display = "none";
+    //$("#"+elem+ " img").css({"width":"150px","height":"100px"})
+  }
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+  $(function(){
+    $('img').mouseenter(function(){
+      var wValue=3 * $(this).width();
+      var hValue=3 * $(this).height();    
+      $(this).stop().animate({width: wValue,
+              height: hValue,
+              left:("-"+(0.5 * $(this).width())/2),
+              top:("-"+(0.5 * $(this).height())/2)}, 1000);
+    }).mouseleave(function(){
+      $(this).stop().animate({width:150,
+                     height: 130,
+                     left:"0px",
+                     top:"0px"}, 1000 );
+    });
+  });
+</script>
+
+
+    <h3>1. Holistic Result</h3>
+
+
+    <div class='table_self_diagnosis'>
+ <div class='tr_title'><div class='td'><a href="#" data-toggle="tooltip" title="different types of models">Model</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="">ctb</a></div>
+</div>
+ <div class='tr_plain'><div class='td'><a href="#" data-toggle="tooltip" title="">BERT</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="">97.68</a></div>
+</div>
+ <div class='tr_plain'><div class='td'><a href="#" data-toggle="tooltip" title="">ELMo</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="">96.77</a></div>
+</div>
+</div>
+
+    <HR style="border:1 dashed #987cb9" width="100%" color="gray" SIZE=2>  
+    <!------------------------------------------------------------------------- -->
+
+    <h3>2. Break-down Performance</h3>
+
+    <div class='table_breakdown'>
+<li><b>Model Setting:</b> <i>BERT</i></li>
+<h5> Dataset: <i> ctb</i>
+<div class='table_breakdown'>
+ <div class='tr_title'><div class='td'><a href="#" data-toggle="tooltip" title="label sonsistency of word">wCon</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="label sonsistency of character">cCon</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="word frequency in training set">wFre</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="character frequency in training set">cFre</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="the length of text span">wLen</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="the length of sentence">sLen</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="oov density in a given sentence">oDen</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="span-level label">tag</a></div>
+</div>
+ <div class='tr'><div class='td'><img src=./cws-fig/BERT-ELMo/ctb-BERT-breakdown-wCon.png alt="image" /><button onclick="myFunction(27428069)">Click Me</button>
+<div id="27428069" style="display: none;">0:(0,) 1:(0,0.5) 2:(0.5,1) 3:(1,)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-BERT-breakdown-cCon.png alt="image" /><button onclick="myFunction(11045632)">Click Me</button>
+<div id="11045632" style="display: none;">0:(0,) 1:(0,0.5) 2:(0.5,1) 3:(1,)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-BERT-breakdown-wFre.png alt="image" /><button onclick="myFunction(79724797)">Click Me</button>
+<div id="79724797" style="display: none;">0:(0,) 1:(0.001,0.009) 2:(0.01,0.107) 3:(0.109,1)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-BERT-breakdown-cFre.png alt="image" /><button onclick="myFunction(15548061)">Click Me</button>
+<div id="15548061" style="display: none;">0:(0,) 1:(0.001,0.026) 2:(0.027,0.08) 3:(0.081,1)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-BERT-breakdown-wLen.png alt="image" /><button onclick="myFunction(69144046)">Click Me</button>
+<div id="69144046" style="display: none;">0:(1,) 1:(2,) 2:(3,) 3:(4,11)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-BERT-breakdown-sLen.png alt="image" /><button onclick="myFunction(8003625)">Click Me</button>
+<div id="8003625" style="display: none;">0:(2,42) 1:(43,62) 2:(63,91) 3:(92,246)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-BERT-breakdown-oDen.png alt="image" /><button onclick="myFunction(21564072)">Click Me</button>
+<div id="21564072" style="display: none;">0:(0,) 1:(0.0041,0.0172) 2:(0.0175,0.0312) 3:(0.0323,1)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-BERT-breakdown-tag.png alt="image" /><button onclick="myFunction(82403772)">Click Me</button>
+<div id="82403772" style="display: none;">0:('BE',) 1:('BME',) 2:('BMME',) 3:('S',)</div>
+</div>
+</div>
+</div></h5>
+<li><b>Model Setting:</b> <i>ELMo</i></li>
+<h5> Dataset: <i> ctb</i>
+<div class='table_breakdown'>
+ <div class='tr_title'><div class='td'><a href="#" data-toggle="tooltip" title="label sonsistency of word">wCon</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="label sonsistency of character">cCon</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="word frequency in training set">wFre</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="character frequency in training set">cFre</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="the length of text span">wLen</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="the length of sentence">sLen</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="oov density in a given sentence">oDen</a></div>
+<div class='td'><a href="#" data-toggle="tooltip" title="span-level label">tag</a></div>
+</div>
+ <div class='tr'><div class='td'><img src=./cws-fig/BERT-ELMo/ctb-ELMo-breakdown-wCon.png alt="image" /><button onclick="myFunction(44642369)">Click Me</button>
+<div id="44642369" style="display: none;">0:(0,) 1:(0,0.5) 2:(0.5,1) 3:(1,)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-ELMo-breakdown-cCon.png alt="image" /><button onclick="myFunction(26820962)">Click Me</button>
+<div id="26820962" style="display: none;">0:(0,) 1:(0,0.5) 2:(0.5,1) 3:(1,)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-ELMo-breakdown-wFre.png alt="image" /><button onclick="myFunction(57355772)">Click Me</button>
+<div id="57355772" style="display: none;">0:(0,) 1:(0.001,0.009) 2:(0.01,0.107) 3:(0.109,1)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-ELMo-breakdown-cFre.png alt="image" /><button onclick="myFunction(86701330)">Click Me</button>
+<div id="86701330" style="display: none;">0:(0,) 1:(0.001,0.026) 2:(0.027,0.08) 3:(0.081,1)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-ELMo-breakdown-wLen.png alt="image" /><button onclick="myFunction(65983000)">Click Me</button>
+<div id="65983000" style="display: none;">0:(1,) 1:(2,) 2:(3,) 3:(4,11)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-ELMo-breakdown-sLen.png alt="image" /><button onclick="myFunction(74164385)">Click Me</button>
+<div id="74164385" style="display: none;">0:(2,42) 1:(43,62) 2:(63,91) 3:(92,246)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-ELMo-breakdown-oDen.png alt="image" /><button onclick="myFunction(75954498)">Click Me</button>
+<div id="75954498" style="display: none;">0:(0,) 1:(0.0041,0.0172) 2:(0.0175,0.0312) 3:(0.0323,1)</div>
+</div>
+<div class='td'><img src=./cws-fig/BERT-ELMo/ctb-ELMo-breakdown-tag.png alt="image" /><button onclick="myFunction(56613041)">Click Me</button>
+<div id="56613041" style="display: none;">0:('BE',) 1:('BME',) 2:('BMME',) 3:('S',)</div>
+</div>
+</div>
+</div>
+
+
+
+
+    <HR style="border:1 dashed #987cb9" width="100%" color="gray" SIZE=2>  
+    <!------------------------------------------------------------------------- -->
+
+    <!------------------------------------------------------------------------- -->
+    <h3>3. Self-diagnosis </h3>
+
+    <li><b>Model Setting:</b> <i>BERT</i></li>
+<div class='table_self_diagnosis'>
+ <div class='tr_title'><div class='td'><a href="#" data-toggle="tooltip" title="">ctb</a></div>
+</div>
+ <div class='tr'><div class='td'><a href="#" data-toggle="tooltip" title=""><img src=./cws-fig/BERT-ELMo/ctb-BERT-selfdiag.png alt="image" /></a></div>
+</div>
+</div>
+<br></br><li><b>Model Setting:</b> <i>ELMo</i></li>
+<div class='table_self_diagnosis'>
+ <div class='tr_title'><div class='td'><a href="#" data-toggle="tooltip" title="">ctb</a></div>
+</div>
+ <div class='tr'><div class='td'><a href="#" data-toggle="tooltip" title=""><img src=./cws-fig/BERT-ELMo/ctb-ELMo-selfdiag.png alt="image" /></a></div>
+</div>
+</div>
+
+
+
+    <HR style="border:1 dashed #987cb9" width="100%" color="gray" SIZE=2>  
+    <!------------------------------------------------------------------------- -->
+
+
+    <h3>4. Aided-diagnosis </h3>
+    <li><b>Model Setting:</b> <i>BERT - ELMo</i></li>
+    <div class='table_aided_diagnosis'>
+ <div class='tr_title'><div class='td'><a href="#" data-toggle="tooltip" title="">ctb</a></div>
+</div>
+ <div class='tr'><div class='td'><a href="#" data-toggle="tooltip" title=""><img src=./cws-fig/BERT-ELMo/ctb-BERT_ELMo-aideddiag.png alt="image" /></a></div>
+</div>
+</div>
+
+
+    <HR style="border:1 dashed #987cb9" width="100%" color="gray" SIZE=2>  
+    <!------------------------------------------------------------------------- -->
+
+    <h3>5. Heatmap </h3>
+    <li><b>Model Setting:</b> <i>BERT - ELMo</i></li>
+    <div class='table_aided_diagnosis'>
+ <div class='tr_title'><div class='td'><a href="#" data-toggle="tooltip" title="">ctb</a></div>
+</div>
+ <div class='tr'><div class='td'><a href="#" data-toggle="tooltip" title=""><img src=./cws-fig/BERT-ELMo/ctb-BERT_ELMo-heatmap.png alt="image" /></a></div>
+</div>
+</div>
+
+
+
+
+
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,8 @@
+# information
+corpus type: msr
+model_name1: msr-BERT
+model_name2: ELMo
+# holistic result 
+msr-BERT: 98.19
+ELMo: 96.23
+
