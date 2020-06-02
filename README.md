@@ -60,26 +60,26 @@ Following, we give an example of the **BERT- and ELMo-system pair** analysis and
 
 1) Holistic Results
 
-![show fig](https://github.com/anonymous4nlp/anonymous4nlp.github.io/raw/master/img/1holistic-result2.png)
+![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/1holistic-result.png)
 
 2) Break-down Performance
 
-LSTM: ![show fig](https://github.com/anonymous4nlp/anonymous4nlp.github.io/raw/master/img/2breakdown-lstm2.png)
+LSTM: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-bert.png)
 
-CNN: ![show fig](https://github.com/anonymous4nlp/anonymous4nlp.github.io/raw/master/img/2breakdown-cnn2.png)
+CNN: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-elmo.png)
 
 
 3) Self-diagnosis
 
-![show fig](https://github.com/anonymous4nlp/anonymous4nlp.github.io/raw/master/img/3selfdiag-lstmcnn2.png)
+![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/3selfdiag-bertelmo.png)
 
 4) Aided-diagnosis
 
-![show fig](https://github.com/anonymous4nlp/anonymous4nlp.github.io/raw/master/img/4compdiag-lstmcnn2.png)
+![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/4compdiag-bertelmo.png)
 
 5) Heatmap
 
-![show fig](https://github.com/anonymous4nlp/anonymous4nlp.github.io/raw/master/img/5heatmap2.png)
+![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/5heatmap.png)
 
 
 ## Analysis and diagnosis your own model.
