@@ -99,8 +99,5 @@ ELMo: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/mas
 
 Here, we give an example of result file format as follow:
 
-![show fig](https://github.com/anonymous4nlp/anonymous4nlp.github.io/blob/master/img/data-format.png)
-
-
-
+![show fig](https://github.com/anonycws/anonycws.github.io/raw/master/img/data-format.png)
 
