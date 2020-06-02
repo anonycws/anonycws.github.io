@@ -1,5 +1,5 @@
 # Interpretable Evaluation for CWS
-The implementation of interpretable evaluation for NER in our paper:
+The implementation of interpretable evaluation for CWS in our paper:
 
 "Is Chinese Word Segmentation a Solved Task? Rethinking Neural Chinese Word Segmentation"
 
@@ -32,7 +32,8 @@ The shell scripts include the following three aspects:
 
 - `genHtml.py` -> Put the figures drawing in the previous step into the web page.
 
-After running the above command, a web page named "tEval-cws.html" will be generated for displaying the analysis and diagnosis results of the models. You can check the results from this link: https://anonymous4nlp.github.io/analysis/tEval-cws.html
+After running the above command, a web page named "tEval-cws.html" will be generated for displaying the analysis and diagnosis results of the models. You can check the results from this link: https://anonycws.github.io/analysis/tEval-cws.html
+
 
 ## Datasets
 
@@ -45,7 +46,7 @@ The datasets utilized in our paper including:
 ## Results
 We provide analysis and diagnosis of model architectures and pre-trained knowledge on **seven** data sets, and the results are shown on the following web pages.
 
-- **Flair-ELMo**: https://anonymous4nlp.github.io/analysis/tEval-ctb-msr-bertelmo.html
+- **BERT-ELMo**: https://anonycws.github.io/analysis/tEval-cws-ctb-bertelmo.html
 
 
 ## The analysis results
@@ -56,6 +57,7 @@ Our model analysis and diagnosis includes **five** aspects:
 - Self-diagnosis; 
 - Aided-diagnosis; 
 - Heatmap. 
+
 Following, we give an example of the **BERT- and ELMo-system pair** analysis and diagnosis on **ctb**.
 
 1) Holistic Results
@@ -64,9 +66,9 @@ Following, we give an example of the **BERT- and ELMo-system pair** analysis and
 
 2) Break-down Performance
 
-LSTM: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-bert.png)
+BERT: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-bert.png)
 
-CNN: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-elmo.png)
+ELMo: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-elmo.png)
 
 
 3) Self-diagnosis
