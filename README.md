@@ -37,8 +37,13 @@ After running `./run_task_cws.sh`, a web page named "tEval-cws.html" will be gen
 
 The datasets utilized in our paper including:
 
-- ctb (in this repository.)
-- msr, cityu, ckip, ncc, pku, sxu 
+- Sighan2005 CITYU (in this repository.)
+- Sighan2005 (PKU, MSR,CITYU) (you can download from [Sighan2005](http://sighan.cs.uchicago.edu/bakeoff2005/) )
+- Sighan2008 (CHIP,NCC,SXU, CTB) (you can download from [Sighan2008](https://www.aclweb.org/mirror/ijcnlp08/sighan6/chinesebakeoff.htm))
+
+## Demo
+We give an example of the **BERT- and ELMo-system pair** analysis and diagnosis on **ctb**. You can check it from the following web page.
+- **BERT-ELMo**: https://anonycws.github.io/analysis/tEval-cws-ctb-bertelmo.html
 
 
 ## Results
@@ -78,8 +83,6 @@ ELMo:
 
 ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/5heatmap.png)
 
-You can check the above example with the web page:
-- **BERT-ELMo**: https://anonycws.github.io/analysis/tEval-cws-ctb-bertelmo.html
 
 ## Analysis and diagnosis your own model.
 
@@ -90,7 +93,7 @@ If you have only one result-file for a model, you can choose one result-file pro
 2) Put the train-set (your result-file trained on) on the path: `./data/`. 
 <!-- You need to set the column delimiter of your train-set and result-file in the `main()` function of `tensorEvaluation-ner.py`. -->
 
-3) Modify parameters in `run_task_ner.sh` to adjust to your data. Such as setting the following parameters:   `path_data` (path of training set), `datasets[-]` (dataset name), `model1` (the first model's name), `model2` (the second model's name), and `resfiles[-]` (the paths of the results).
+3) Modify parameters in `run_task_cws.sh` to adjust to your data. Such as setting the following parameters:   `path_data` (path of training set), `datasets[-]` (dataset name), `model1` (the first model's name), `model2` (the second model's name), and `resfiles[-]` (the paths of the results).
 
 ### Note: 
 - **At least two result-files are required.**  Comparative-diagnosis is utilized to compare the strengths and weaknesses of two models, so it is necessary to input as least two model results. 

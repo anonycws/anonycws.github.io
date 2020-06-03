@@ -71,8 +71,8 @@ def loadConf(path_conf):
 
 parser = argparse.ArgumentParser(description='Learning tagger using neural networks')
 parser.add_argument('--n_dataset', default='1', help='the number of dataset')
-parser.add_argument('--n_attribute', default='ner-list.xlsx', help='model name is utilized to name the error figure.')
-parser.add_argument('--bs', default='ner-list.xlsx', help='model name is utilized to name the error figure.')
+parser.add_argument('--n_attribute', default='list.xlsx', help='model name is utilized to name the error figure.')
+parser.add_argument('--bs', default='list.xlsx', help='model name is utilized to name the error figure.')
 
 
 
