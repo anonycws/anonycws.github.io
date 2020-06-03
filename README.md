@@ -4,13 +4,11 @@ The implementation of interpretable evaluation for CWS in our paper:
 "Is Chinese Word Segmentation a Solved Task? Rethinking Neural Chinese Word Segmentation"
 
 ## Advantages of This Codes
-* The process of generating analysis and diagnosis figures, the latex-sources (utilized to generate the figures), and the web page (used to display the results) are automatic.
+* Our codes can automatically generate figures (with latex codes), web pages.
 * It is easy to delete or add attributes by simply modifying the `conf.cws-attributes`.
-* It is easy to change the bucketing method for a specific attribute by modifying the definition of the bucketing method in  `conf.cws-attributes`.
-* It is easy to extend this code for other sequence labeling tasks. Only a few parameters in the `run_task_cws.sh` need to be modified, such as `task_type` and  `path_attribute_conf`. (It may be necessary to add or delete attributes appropriately.)
+* It is easy to change the bucketing strategy for a specific attribute by modifying the bucketing strategy defined in  `conf.cws-attributes`.
+* It is easy to extend this code for other sequence labeling tasks. Only a few parameters in the `run_task_cws.sh` need to be modified, such as `task_type` and  `path_attribute_conf`. (Maybe adding or deleting attributes are needed.)
 * It can help us quickly analyze and diagnose the strengths and weaknesses of a model.
-
-
 
 
 ## Requirements
@@ -26,13 +24,13 @@ The implementation of interpretable evaluation for CWS in our paper:
 
 The shell scripts include the following three aspects:
 
-- `tensorEvaluation-cws.py` -> Calculate the dependent results of fine-grained analysis.
+- `tensorEvaluation-cws.py` -> Calculate the dependent results of the fine-grained analysis.
 
 - `genFig.py` -> Drawing figures to show the results of the fine-grained analysis.
 
 - `genHtml.py` -> Put the figures drawing in the previous step into the web page.
 
-After running the above command, a web page named "tEval-cws.html" will be generated for displaying the analysis and diagnosis results of the models. You can check the results from this link: https://anonycws.github.io/analysis/tEval-cws.html
+After running `./run_task_cws.sh`, a web page named "tEval-cws.html" will be generated for displaying the figures with respect to fine-grained analysis. 
 
 
 ## Datasets
@@ -44,14 +42,7 @@ The datasets utilized in our paper including:
 
 
 ## Results
-We provide analysis and diagnosis of model architectures and pre-trained knowledge on **seven** data sets, and the results are shown on the following web pages.
-
-- **BERT-ELMo**: https://anonycws.github.io/analysis/tEval-cws-ctb-bertelmo.html
-
-
-## The analysis results
-
-Our model analysis and diagnosis includes **five** aspects: 
+We provide analysis and diagnosis of model architectures and pre-trained knowledge on **seven** data sets, and the fine-grained analysis includs **five** aspects: 
 - Holistic Results; 
 - Break-down Performance; 
 - Self-diagnosis; 
@@ -83,19 +74,31 @@ ELMo: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/mas
 
 ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/5heatmap.png)
 
+You can check the above example with the web page:
+- **BERT-ELMo**: https://anonycws.github.io/analysis/tEval-cws-ctb-bertelmo.html
 
 ## Analysis and diagnosis your own model.
+
+1) Put the result-files of your models on this path: `preComputed/cws/result/`. 
+At least two result-files are required because the comparative-diagnosis is based on comparing with two models. 
+If you have only one result-file for a model, you can choose one result-file of a specific model provided by us (on the path: `preComputed/cws/metric/result/`).
+
+2) Put the train-set which your result-file trained on the path: `./data/`. 
+<!-- You need to set the column delimiter of your train-set and result-file in the `main()` function of `tensorEvaluation-ner.py`. -->
+
+3) Set the `path_data` (path of training set), `datasets[-]` (dataset name), `model1` (the first model's name), `model2` (the second model's name), and `resfiles[-]` (the paths of the results) in `run_task_cws.sh` according to your data.
+
 
 1) Put the result-file of your model on this path: `preComputed/cws/result/`. In order to carry out model diagnosis, two or more model result files must be included. You can also choose one of the result files provided by us as the reference model.
 
 2) Put the train-set which your result-file trained on the path: `./data/`. You need to set the column delimiter of your train-set and result-file in the `main()` function of `tensorEvaluation-cws.py`.
 
-3) Set the `path_data` (path of training set), `datasets[-]` (dataset name), `model1` (the first model's name), `model2` (the second model's name), `resfiles[-]` (the paths of the results) in `run_task_cws.sh` according to your data.
+3) Modify parameters in `run_task_ner.sh` to adjust to your data. Such as setting the following parameters:   `path_data` (path of training set), `datasets[-]` (dataset name), `model1` (the first model's name), `model2` (the second model's name), and `resfiles[-]` (the paths of the results).
 
 ### Note: 
-- **More than two result files are required.**  Because comparative-diagnosis is to compare the strengths and weaknesses of the model architectures and pre-trained knowledge between two or more models, it is necessary to input as least two model results. 
+- **At least two result-files are required.**  Comparative-diagnosis is utilized to compare the strengths and weaknesses of two models, so it is necessary to input as least two model results. 
 
-- **The result file must include three columns of words, true-tags, and predicted-tags, separated by space.** If your result file is not in the required format, you can modify the function `read_data()` in file `tensorEvaluation-cws.py` to adaptive to your format. 
+- **The result-file must contain three columns separated by spaces, the columns from left to right are words, true-tags, and predicted-tags.** If your result-file format does not meet the requirement, you can set the column delimiter of your result-file (or train-set file) in `tensorEvaluation-cws.py`.
 
 Here, we give an example of result file format as follow:
 
