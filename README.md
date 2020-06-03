@@ -42,7 +42,7 @@ The datasets utilized in our paper including:
 
 
 ## Results
-We provide analysis and diagnosis of model architectures and pre-trained knowledge on **seven** data sets, and the fine-grained analysis includs **five** aspects: 
+We provide analysis and diagnosis of model architectures and pre-trained knowledge on **seven** data sets, and the fine-grained analysis includes **five** aspects: 
 - Holistic Results; 
 - Break-down Performance; 
 - Self-diagnosis; 
@@ -81,17 +81,10 @@ You can check the above example with the web page:
 
 1) Put the result-files of your models on this path: `preComputed/cws/result/`. 
 At least two result-files are required because the comparative-diagnosis is based on comparing with two models. 
-If you have only one result-file for a model, you can choose one result-file of a specific model provided by us (on the path: `preComputed/cws/metric/result/`).
+If you have only one result-file for a model, you can choose one result-file provided by us (on the path: `preComputed/cws/metric/result/`).
 
-2) Put the train-set which your result-file trained on the path: `./data/`. 
+2) Put the train-set (your result-file trained on) on the path: `./data/`. 
 <!-- You need to set the column delimiter of your train-set and result-file in the `main()` function of `tensorEvaluation-ner.py`. -->
-
-3) Set the `path_data` (path of training set), `datasets[-]` (dataset name), `model1` (the first model's name), `model2` (the second model's name), and `resfiles[-]` (the paths of the results) in `run_task_cws.sh` according to your data.
-
-
-1) Put the result-file of your model on this path: `preComputed/cws/result/`. In order to carry out model diagnosis, two or more model result files must be included. You can also choose one of the result files provided by us as the reference model.
-
-2) Put the train-set which your result-file trained on the path: `./data/`. You need to set the column delimiter of your train-set and result-file in the `main()` function of `tensorEvaluation-cws.py`.
 
 3) Modify parameters in `run_task_ner.sh` to adjust to your data. Such as setting the following parameters:   `path_data` (path of training set), `datasets[-]` (dataset name), `model1` (the first model's name), `model2` (the second model's name), and `resfiles[-]` (the paths of the results).
 
