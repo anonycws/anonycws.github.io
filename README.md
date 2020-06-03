@@ -37,8 +37,7 @@ After running `./run_task_cws.sh`, a web page named "tEval-cws.html" will be gen
 
 The datasets utilized in our paper including:
 
-- Sighan2005 CITYU (in this repository.)
-- Sighan2005 (PKU, MSR,CITYU) (you can download from [Sighan2005](http://sighan.cs.uchicago.edu/bakeoff2005/) )
+- Sighan2005 (PKU, MSR,CITYU) (in this repository. you can also download from [Sighan2005](http://sighan.cs.uchicago.edu/bakeoff2005/) )
 - Sighan2008 (CHIP,NCC,SXU, CTB) (you can download from [Sighan2008](https://www.aclweb.org/mirror/ijcnlp08/sighan6/chinesebakeoff.htm))
 
 ## Demo
