@@ -57,9 +57,13 @@ Following, we give an example of the **BERT- and ELMo-system pair** analysis and
 
 2) Break-down Performance
 
-BERT: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-bert.png)
+BERT: 
 
-ELMo: ![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-elmo.png)
+![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-bert.png)
+
+ELMo: 
+
+![show fig](https://github.com/anonycws/interpretablecws.github.io/raw/master/img/2breakdown-elmo.png)
 
 
 3) Self-diagnosis
